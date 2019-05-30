@@ -2,6 +2,6 @@
 
 export interface StoreState {
   board: Array<Array<number>>;
-  turn: number;
+  turn: boolean;
   winner?: number;
 }

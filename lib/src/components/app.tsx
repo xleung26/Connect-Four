@@ -1,32 +1,22 @@
 import * as React from 'react';
 
 export interface Props {
-  name: string;
-  enthusiasmLevel?: number;
+  board: Array<Array<number>>;
+  turn: number;
+  winner: number;
 }
 
-class Hello extends React.Component<Props, object> {
-  render() {
-    const { name, enthusiasmLevel = 1 } = this.props;
+const App = ({
+  board,
+  turn,
+  winner,
+  handlePlayersMove,
+  handleTurn,
+  handleCheckWin
+}) => (
+  <div>
 
-    if (enthusiasmLevel <= 0) {
-      throw new Error('You could be a little more enthusiastic. :D');
-    }
+  </div>
+)
 
-    return (
-      <div className="hello">
-        <div className="greeting">
-          Hello {name + getExclamationMarks(enthusiasmLevel)}
-        </div>
-      </div>
-    );
-  }
-}
-
-export default Hello;
-
-// helpers
-
-function getExclamationMarks(numChars: number) {
-  return Array(numChars + 1).join('!');
-}
+export default App;
